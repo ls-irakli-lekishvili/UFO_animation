@@ -130,6 +130,19 @@
         {name: "UFO_atlas_123", frames: [[0, 0, 1920, 1080]]},
         {name: "UFO_atlas_124", frames: [[0, 0, 1920, 1080]]},
         {name: "UFO_atlas_125", frames: [[0, 0, 1920, 1080]]},
+        {name:"Background_atlas_1", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_2", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_3", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_4", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_5", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_6", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_7", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_8", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_9", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_10", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_11", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_12", frames: [[0,0,1920,1080]]},
+        {name:"Background_atlas_13", frames: [[0,0,1920,1080]]}
     ];
 
 
@@ -899,6 +912,96 @@
         this.gotoAndStop(0);
     }).prototype = p = new cjs.Sprite();
 
+    (lib.BackgrounD_00112 = function() {
+        this.initialize(ss["Background_atlas_1"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00113 = function() {
+        this.initialize(ss["Background_atlas_2"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00114 = function() {
+        this.initialize(ss["Background_atlas_3"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00115 = function() {
+        this.initialize(ss["Background_atlas_4"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00116 = function() {
+        this.initialize(ss["Background_atlas_5"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00117 = function() {
+        this.initialize(ss["Background_atlas_6"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00118 = function() {
+        this.initialize(ss["Background_atlas_7"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00119 = function() {
+        this.initialize(ss["Background_atlas_8"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00120 = function() {
+        this.initialize(ss["Background_atlas_9"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00121 = function() {
+        this.initialize(ss["Background_atlas_10"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00122 = function() {
+        this.initialize(ss["Background_atlas_11"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00123 = function() {
+        this.initialize(ss["Background_atlas_12"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
+
+    (lib.BackgrounD_00124 = function() {
+        this.initialize(ss["Background_atlas_13"]);
+        this.gotoAndStop(0);
+    }).prototype = p = new cjs.Sprite();
+
+
 
     (lib.ufo = function (mode, startPosition, loop, reversed) {
         if (loop == null) {
@@ -1166,10 +1269,38 @@
 
         this.instance_124 = new lib.vol_00128();
 
+
+        this.instance_125 = new lib.BackgrounD_00112();
+
+        this.instance_126 = new lib.BackgrounD_00112();
+
+        this.instance_127 = new lib.BackgrounD_00113();
+
+        this.instance_128 = new lib.BackgrounD_00114();
+
+        this.instance_129 = new lib.BackgrounD_00115();
+
+        this.instance_130 = new lib.BackgrounD_00116();
+
+        this.instance_131 = new lib.BackgrounD_00117();
+
+        this.instance_132 = new lib.BackgrounD_00118();
+
+        this.instance_133 = new lib.BackgrounD_00119();
+
+        this.instance_134 = new lib.BackgrounD_00120();
+
+        this.instance_135 = new lib.BackgrounD_00121();
+
+        this.instance_136 = new lib.BackgrounD_00122();
+
+        this.instance_137 = new lib.BackgrounD_00123();
+
+        this.instance_138 = new lib.BackgrounD_00124();
+
         this.timeline.addTween(cjs.Tween.get({})
             .call(() => {
                 console.log("animationstart");
-                console.time("animation");
             })
             .to({state: [{t: this.instance}]})
             .to({state: [{t: this.instance_1}]}, 1)
@@ -1231,7 +1362,7 @@
             .call(() => {
                 console.log("progressbar");
                 const progress = document.querySelector('.loader_body');
-                progress.style.animationPlayState = "running";
+                progress.classList.add('animated');
             })
             .to({state: [{t: this.instance_53}]}, 1)
             .to({state: [{t: this.instance_54}]}, 1)
@@ -1312,19 +1443,33 @@
             .to({state: [{t: this.instance_117}]}, 1)
             .to({state: [{t: this.instance_118}]}, 1)
             .to({state: [{t: this.instance_119}]}, 1)
-            // .call(() => {
-            //     debugger;
-            //     // background collapse;
-            // })
+            .call(() => {
+                const progress = document.querySelector('.loader_body');
+                const loader = document.querySelector('.loader');
+                loader.style.opacity = '0';
+                progress.classList.remove('animated');
+                // background collapse;
+            })
             .to({state: [{t: this.instance_120}]}, 1)
             .to({state: [{t: this.instance_121}]}, 1)
             .to({state: [{t: this.instance_122}]}, 1)
             .to({state: [{t: this.instance_123}]}, 1)
             .to({state: [{t: this.instance_124}]}, 1)
-            .call(() => {
-               console.timeEnd("animation")
-            }));
-            // .wait(1));
+            .to({state: [{t: this.instance_125}]}, 1)
+            .to({state: [{t: this.instance_126}]}, 1)
+            .to({state: [{t: this.instance_127}]}, 1)
+            .to({state: [{t: this.instance_128}]}, 1)
+            .to({state: [{t: this.instance_129}]}, 1)
+            .to({state: [{t: this.instance_130}]}, 1)
+            .to({state: [{t: this.instance_131}]}, 1)
+            .to({state: [{t: this.instance_132}]}, 1)
+            .to({state: [{t: this.instance_133}]}, 1)
+            .to({state: [{t: this.instance_134}]}, 1)
+            .to({state: [{t: this.instance_135}]}, 1)
+            .to({state: [{t: this.instance_136}]}, 1)
+            .to({state: [{t: this.instance_137}]}, 1)
+            .to({state: [{t: this.instance_138}]}, 1));
+        // .wait(1));
         this.timeline.addEventListener('complete', () => {
             console.log(this.timeline.progress);
             console.log("completed")
@@ -1870,7 +2015,20 @@
             {
                 "src": "images/UFO/UFO_20Animation_atlas_125.png",
                 "id": "UFO_atlas_125"
-            }
+            },
+            {src: "images/background/Background_atlas_1.png", id: "Background_atlas_1"},
+            {src: "images/background/Background_atlas_2.png", id: "Background_atlas_2"},
+            {src: "images/background/Background_atlas_3.png", id: "Background_atlas_3"},
+            {src: "images/background/Background_atlas_4.png", id: "Background_atlas_4"},
+            {src: "images/background/Background_atlas_5.png", id: "Background_atlas_5"},
+            {src: "images/background/Background_atlas_6.png", id: "Background_atlas_6"},
+            {src: "images/background/Background_atlas_7.png", id: "Background_atlas_7"},
+            {src: "images/background/Background_atlas_8.png", id: "Background_atlas_8"},
+            {src: "images/background/Background_atlas_9.png", id: "Background_atlas_9"},
+            {src: "images/background/Background_atlas_10.png", id: "Background_atlas_10"},
+            {src: "images/background/Background_atlas_11.png", id: "Background_atlas_11"},
+            {src: "images/background/Background_atlas_12.png", id: "Background_atlas_12"},
+            {src: "images/background/Background_atlas_13.png", id: "Background_atlas_13"}
         ],
         preloads: []
     };
